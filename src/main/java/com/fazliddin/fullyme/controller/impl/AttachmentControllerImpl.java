@@ -1,5 +1,6 @@
-package com.fazliddin.fullyme.controller;
+package com.fazliddin.fullyme.controller.impl;
 
+import com.fazliddin.fullyme.controller.AttachmentController;
 import com.fazliddin.fullyme.entity.Attachment;
 import com.fazliddin.fullyme.payload.ApiResult;
 import com.fazliddin.fullyme.payload.ResponseFileDto;

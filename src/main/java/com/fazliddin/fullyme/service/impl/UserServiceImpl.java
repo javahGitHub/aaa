@@ -1,4 +1,4 @@
-package com.fazliddin.fullyme.service;
+package com.fazliddin.fullyme.service.impl;
 
 import com.fazliddin.fullyme.common.MessageService;
 import com.fazliddin.fullyme.entity.Attachment;
@@ -12,6 +12,7 @@ import com.fazliddin.fullyme.payload.resp.EditUserDto;
 import com.fazliddin.fullyme.payload.resp.UserDto;
 import com.fazliddin.fullyme.repository.AttachmentRepository;
 import com.fazliddin.fullyme.repository.UserRepository;
+import com.fazliddin.fullyme.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.GrantedAuthority;

@@ -1,4 +1,4 @@
-package com.fazliddin.fullyme.service;
+package com.fazliddin.fullyme.service.impl;
 
 import com.fazliddin.fullyme.common.MessageService;
 import com.fazliddin.fullyme.controller.SmsService;
@@ -15,6 +15,7 @@ import com.fazliddin.fullyme.repository.RoleRepository;
 import com.fazliddin.fullyme.repository.UserRepository;
 import com.fazliddin.fullyme.repository.VerificationCodeRepository;
 import com.fazliddin.fullyme.security.JwtProvider;
+import com.fazliddin.fullyme.service.AuthService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import org.springframework.beans.factory.annotation.Autowired;

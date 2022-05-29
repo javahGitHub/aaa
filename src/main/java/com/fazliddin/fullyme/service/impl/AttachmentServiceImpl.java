@@ -1,4 +1,4 @@
-package com.fazliddin.fullyme.service;
+package com.fazliddin.fullyme.service.impl;
 
 import com.fazliddin.fullyme.common.MessageService;
 import com.fazliddin.fullyme.entity.Attachment;
@@ -8,6 +8,7 @@ import com.fazliddin.fullyme.payload.ApiResult;
 import com.fazliddin.fullyme.payload.ResponseFileDto;
 import com.fazliddin.fullyme.repository.AttachmentContentRepository;
 import com.fazliddin.fullyme.repository.AttachmentRepository;
+import com.fazliddin.fullyme.service.AttachmentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.util.FileCopyUtils;

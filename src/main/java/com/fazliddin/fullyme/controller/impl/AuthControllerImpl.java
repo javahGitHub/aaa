@@ -1,8 +1,9 @@
-package com.fazliddin.fullyme.controller;
+package com.fazliddin.fullyme.controller.impl;
 
+import com.fazliddin.fullyme.controller.AuthController;
 import com.fazliddin.fullyme.payload.ApiResult;
 import com.fazliddin.fullyme.payload.req.*;
-import com.fazliddin.fullyme.service.AuthServiceImpl;
+import com.fazliddin.fullyme.service.impl.AuthServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RestController;
 

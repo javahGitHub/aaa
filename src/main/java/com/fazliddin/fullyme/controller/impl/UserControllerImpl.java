@@ -1,5 +1,6 @@
-package com.fazliddin.fullyme.controller;
+package com.fazliddin.fullyme.controller.impl;
 
+import com.fazliddin.fullyme.controller.UserController;
 import com.fazliddin.fullyme.entity.User;
 import com.fazliddin.fullyme.payload.ApiResult;
 import com.fazliddin.fullyme.payload.UserPrincipal;

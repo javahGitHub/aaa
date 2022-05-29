@@ -31,9 +31,9 @@ public class User extends AbstractUUID implements UserDetails {
     @Column(name = "username")
     private String username;
 
-    @Builder.Default
+//    @Builder.Default
     @Column(name = "password", nullable = false)
-    private String password="1";
+    private String password;
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "role_id")

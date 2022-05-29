@@ -25,8 +25,8 @@ public class Course extends AbstractUUID {
 
     private Double price;
 
-    @Column(name = "reqirements" , columnDefinition = "text")
-    private String reqirements;
+    @Column(name = "requirements" , columnDefinition = "text")
+    private String requirements;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn()

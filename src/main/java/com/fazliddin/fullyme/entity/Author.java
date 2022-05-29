@@ -20,7 +20,7 @@ import javax.persistence.Table;
 @SQLDelete(sql = "update authors set deleted = false where id = ?")
 public class Author extends AbstractUUID {
 
-    private String firsName;
+    private String firstName;
     private String lastName;
 
     @Column(name = "about" , columnDefinition = "text")
@@ -32,7 +32,6 @@ public class Author extends AbstractUUID {
     @Column(name = "github_link")
     private String githubLink;
 
-    @Column(name = "linkedIn_Link")
+    @Column(name = "linked_in_link")
     private String linkedInLink;
-
 }

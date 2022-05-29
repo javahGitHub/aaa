@@ -1,6 +1,6 @@
 package com.fazliddin.fullyme.security;
 
-import com.fazliddin.fullyme.service.AuthServiceImpl;
+import com.fazliddin.fullyme.service.impl.AuthServiceImpl;
 import com.google.gson.Gson;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

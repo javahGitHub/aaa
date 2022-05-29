@@ -2,7 +2,7 @@ package com.fazliddin.fullyme.config;
 
 import com.fazliddin.fullyme.security.JwtFilter;
 import com.fazliddin.fullyme.security.RestAuthenticationEntryPoint;
-import com.fazliddin.fullyme.service.AuthServiceImpl;
+import com.fazliddin.fullyme.service.impl.AuthServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
