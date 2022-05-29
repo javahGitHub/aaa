@@ -9,12 +9,11 @@ import com.fazliddin.fullyme.payload.ApiResult;
 import com.fazliddin.fullyme.payload.UserPrincipal;
 import com.fazliddin.fullyme.payload.req.UserReqDto;
 import com.fazliddin.fullyme.payload.resp.EditUserDto;
-import com.fazliddin.fullyme.payload.resp.UserDto;
+import com.fazliddin.fullyme.payload.resp.UserRespDto;
 import com.fazliddin.fullyme.repository.AttachmentRepository;
 import com.fazliddin.fullyme.repository.UserRepository;
 import com.fazliddin.fullyme.service.UserService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +22,6 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
@@ -31,29 +29,29 @@ public class UserServiceImpl implements UserService {
     private final AttachmentRepository attachmentRepository;
 
     @Override
-    public ApiResult<UserDto> me(UserPrincipal userPrincipal) {
-        UserDto userDto = new UserDto();
+    public ApiResult<UserRespDto> me(UserPrincipal userPrincipal) {
+        UserRespDto userRespDto = new UserRespDto();
         User user = userPrincipal.getUser();
-        userDto.setFirstName(user.getFirstName());
-        userDto.setLastName(user.getLastName());
+        userRespDto.setFirstName(user.getFirstName());
+        userRespDto.setLastName(user.getLastName());
 //        userDto.setAuthorities(userPrincipal.getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.toSet()));
-        userDto.setUsername(userDto.getUsername());
-        userDto.setRole(user.getRole());
-        userDto.setPhoto(user.getPhoto());
-        return ApiResult.successResponse(userDto);
+        userRespDto.setUsername(userRespDto.getUsername());
+        userRespDto.setRole(user.getRole());
+        userRespDto.setPhoto(user.getPhoto());
+        return ApiResult.successResponse(userRespDto);
     }
 
     @Override
-    public ApiResult<UserDto> checkAuth(UserPrincipal userPrincipal) {
-        UserDto userDto = new UserDto();
+    public ApiResult<UserRespDto> checkAuth(UserPrincipal userPrincipal) {
+        UserRespDto userRespDto = new UserRespDto();
         User user = userPrincipal.getUser();
-        userDto.setFirstName(user.getFirstName());
-        userDto.setLastName(user.getLastName());
-        userDto.setAuthorities(userPrincipal.getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.toSet()));
-        userDto.setUsername(userDto.getUsername());
-        userDto.setRole(user.getRole());
-        userDto.setPhoto(user.getPhoto());
-        return ApiResult.successResponse(userDto);
+        userRespDto.setFirstName(user.getFirstName());
+        userRespDto.setLastName(user.getLastName());
+        userRespDto.setAuthorities(userPrincipal.getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.toSet()));
+        userRespDto.setUsername(userRespDto.getUsername());
+        userRespDto.setRole(user.getRole());
+        userRespDto.setPhoto(user.getPhoto());
+        return ApiResult.successResponse(userRespDto);
     }
 
     @Override

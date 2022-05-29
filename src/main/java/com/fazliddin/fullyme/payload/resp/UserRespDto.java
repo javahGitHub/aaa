@@ -8,7 +8,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import java.sql.Date;
 import java.util.Set;
 import java.util.UUID;
 
@@ -17,7 +16,7 @@ import java.util.UUID;
 @Data
 @ToString
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class UserDto {
+public class UserRespDto {
 
     private UUID id;
 

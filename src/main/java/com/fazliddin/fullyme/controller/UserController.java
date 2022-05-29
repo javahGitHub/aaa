@@ -7,7 +7,7 @@ import com.fazliddin.fullyme.payload.ApiResult;
 import com.fazliddin.fullyme.payload.UserPrincipal;
 import com.fazliddin.fullyme.payload.req.UserReqDto;
 import com.fazliddin.fullyme.payload.resp.EditUserDto;
-import com.fazliddin.fullyme.payload.resp.UserDto;
+import com.fazliddin.fullyme.payload.resp.UserRespDto;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
@@ -18,10 +18,10 @@ public interface UserController {
     String USER_CONTROLLER = AppConstants.BASE_URL + "/user";
 
     @GetMapping
-    ApiResult<UserDto> me(@CurrentUser UserPrincipal userPrincipal);
+    ApiResult<UserRespDto> me(@CurrentUser UserPrincipal userPrincipal);
 
     @PostMapping("/check-auth")
-    ApiResult<UserDto> checkAuth(@CurrentUser UserPrincipal userPrincipal);
+    ApiResult<UserRespDto> checkAuth(@CurrentUser UserPrincipal userPrincipal);
     // edit
 
     @PutMapping("/{id}")

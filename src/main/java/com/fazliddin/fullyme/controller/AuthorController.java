@@ -21,7 +21,7 @@ public interface AuthorController {
     ApiResult<CustomPage<AuthorRespDto>> getAll(@RequestParam(name = "page", defaultValue = DEFAULT_PAGE_NUMBER, required = false) Integer page,
                                                 @RequestParam(name = "size", defaultValue = DEFAULT_PAGE_SIZE, required = false) Integer size);
 
-    @GetMapping("{/id}")
+    @GetMapping("/{id}")
     ApiResult<AuthorRespDto> get(@PathVariable UUID id);
 
     @PostMapping("/create")

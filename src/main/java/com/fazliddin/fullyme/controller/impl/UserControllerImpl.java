@@ -6,7 +6,7 @@ import com.fazliddin.fullyme.payload.ApiResult;
 import com.fazliddin.fullyme.payload.UserPrincipal;
 import com.fazliddin.fullyme.payload.req.UserReqDto;
 import com.fazliddin.fullyme.payload.resp.EditUserDto;
-import com.fazliddin.fullyme.payload.resp.UserDto;
+import com.fazliddin.fullyme.payload.resp.UserRespDto;
 import com.fazliddin.fullyme.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,12 +19,12 @@ public class UserControllerImpl implements UserController {
 
     private final UserService userService;
     @Override
-    public ApiResult<UserDto> me(UserPrincipal userPrincipal) {
+    public ApiResult<UserRespDto> me(UserPrincipal userPrincipal) {
         return userService.me(userPrincipal);
     }
 
     @Override
-    public ApiResult<UserDto> checkAuth(UserPrincipal userPrincipal) {
+    public ApiResult<UserRespDto> checkAuth(UserPrincipal userPrincipal) {
         return userService.checkAuth(userPrincipal);
     }
 

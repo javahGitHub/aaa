@@ -21,7 +21,6 @@ import java.util.List;
 @Where(clause = "deleted=false")
 @SQLDelete(sql = "update sections set deleted = false where id = ?")
 public class Section extends AbstractUUID {
-
     private String name;
 
     @OneToMany(fetch = FetchType.LAZY)
